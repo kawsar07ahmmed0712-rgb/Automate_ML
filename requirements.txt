@@ -1,0 +1,28 @@
+# requirements.txt
+# Recommended Python: 3.11
+
+pandas==2.3.3
+numpy==2.3.4
+pydantic==2.13.2
+pyarrow==23.0.1
+charset-normalizer==3.4.7
+clevercsv==0.8.4
+rapidfuzz==3.14.5
+pandera[pandas]==0.31.1
+scipy==1.16.3
+scikit-learn==1.8.0
+PyYAML==6.0.3
+
+streamlit==1.55.0
+ydata-profiling==4.18.1
+pyod==3.2.0
+
+ftfy==6.3.1
+dateparser==1.4.0
+
+pytest==9.0.2
+pytest-cov==7.1.0
+ruff==0.15.11
+mypy==1.20.1
+build==1.4.2
+twine==6.2.0

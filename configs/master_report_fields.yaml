@@ -1,0 +1,31 @@
+    identity:
+      - column
+      - current_dtype
+      - suggested_dtype
+      - semantic_type
+      - semantic_confidence
+
+    missingness:
+      - missing_count
+      - missing_pct
+      - mixed_null_tokens_flag
+      - missing_indicator_candidate
+
+    numeric:
+      - skewness
+      - outlier_pct_iqr
+      - zero_pct
+      - scaling_candidate
+      - log_transform_candidate
+
+    categorical:
+      - cardinality
+      - rare_label_count
+      - dirty_label_flag
+      - encoding_hint
+
+    final:
+      - severity
+      - quality_score
+      - final_recommendation
+    

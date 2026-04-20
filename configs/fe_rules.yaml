@@ -1,0 +1,16 @@
+    rules:
+      - name: drop_identifier
+        when:
+          semantic_type: identifier
+          unique_ratio_gte: 0.98
+        action:
+          keep_drop_review: drop
+          final_recommendation: drop identifier column from modeling
+
+      - name: median_plus_indicator
+        when:
+          semantic_type: numeric_continuous
+          missing_pct_gte: 0.30
+        action:
+          missing_action: median_plus_indicator
+    

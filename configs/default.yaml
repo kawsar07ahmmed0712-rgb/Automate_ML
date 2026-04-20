@@ -1,0 +1,8 @@
+    target_col: null
+    date_col: null
+    id_col: null
+
+    export_csv: true
+    export_json: true
+    export_html: false
+    

@@ -1,0 +1,22 @@
+    missing_warn: 0.10
+    missing_high: 0.30
+    missing_severe: 0.60
+
+    unique_ratio_id_like: 0.98
+
+    numeric_parse_threshold: 0.90
+    datetime_parse_threshold: 0.90
+    bool_parse_threshold: 0.95
+
+    rare_category_threshold: 0.01
+    high_cardinality_threshold: 50
+
+    outlier_iqr_warn_pct: 0.01
+    outlier_iqr_high_pct: 0.05
+
+    skew_warn: 1.0
+    skew_high: 2.0
+
+    zero_heavy_threshold: 0.80
+    corr_high: 0.90
+    
