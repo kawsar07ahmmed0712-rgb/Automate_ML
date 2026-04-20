@@ -1,0 +1,20 @@
+{
+  "column_count": 12,
+  "high_severity_columns": 0,
+  "medium_severity_columns": 3,
+  "low_severity_columns": 9,
+  "average_quality_score": 96.57,
+  "columns_with_missingness": 0,
+  "high_missingness_columns": 0,
+  "severe_missingness_columns": 0,
+  "high_cardinality_columns": 1,
+  "rare_label_burden_columns": 1,
+  "high_outlier_columns": 2,
+  "severe_skew_columns": 2,
+  "identifier_like_columns": 1,
+  "datetime_columns": 1,
+  "text_cleaning_columns": 1,
+  "high_priority_fe_columns": 2,
+  "medium_priority_fe_columns": 3,
+  "drop_candidate_columns": 1
+}

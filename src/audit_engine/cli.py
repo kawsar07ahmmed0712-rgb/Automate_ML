@@ -1,30 +1,33 @@
-    import argparse
-    from audit_engine.pipelines.full_pipeline import run_full_audit
-    from audit_engine.pipelines.master_pipeline import run_master_report
-    from audit_engine.pipelines.fe_pipeline import run_fe_report
+from __future__ import annotations
 
-    def main():
-        parser = argparse.ArgumentParser(prog="audit-engine")
-        subparsers = parser.add_subparsers(dest="command", required=True)
+import argparse
 
-        master = subparsers.add_parser("master")
-        master.add_argument("file", nargs="?")
+from audit_engine.pipelines.full_pipeline import run_full_pipeline
 
-        fe = subparsers.add_parser("fe")
-        fe.add_argument("file", nargs="?")
 
-        full = subparsers.add_parser("full")
-        full.add_argument("file", nargs="?")
+def main():
+    parser = argparse.ArgumentParser(prog="audit-engine")
 
-        args = parser.parse_args()
+    parser.add_argument("file", help="Path to train/input CSV file")
+    parser.add_argument("--test-file", default=None, help="Optional test CSV file for schema comparison")
+    parser.add_argument("--target", default=None, help="Target column name")
+    parser.add_argument("--date", default=None, help="Date column name")
+    parser.add_argument("--id-col", default=None, help="ID column name")
+    parser.add_argument("--outdir", default="outputs", help="Output directory")
+    parser.add_argument("--thresholds", default="configs/thresholds.yaml", help="Threshold config YAML path")
 
-        if args.command == "master":
-            run_master_report(args.file)
-        elif args.command == "fe":
-            run_fe_report(args.file)
-        elif args.command == "full":
-            run_full_audit(args.file)
+    args = parser.parse_args()
 
-    if __name__ == "__main__":
-        main()
-    
+    run_full_pipeline(
+        file_path=args.file,
+        test_file_path=args.test_file,
+        target_col=args.target,
+        date_col=args.date,
+        id_col=args.id_col,
+        out_dir=args.outdir,
+        thresholds_path=args.thresholds,
+    )
+
+
+if __name__ == "__main__":
+    main()

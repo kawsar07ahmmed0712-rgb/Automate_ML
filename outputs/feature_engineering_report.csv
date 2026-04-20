@@ -1,0 +1,13 @@
+column,semantic_type,keep_drop_review,missing_action,outlier_action,encoding_needed,scaling_needed,transform_needed,text_cleaning_needed,category_cleaning_needed,priority,final_recommendation
+case_id,identifier,drop,none,not_applicable,not_applicable,False,none,False,False,high,drop identifier-like column from modeling
+case_status,target,keep,none,not_applicable,not_applicable,False,none,False,False,high,target column - do not treat as feature unless explicitly intended
+education_of_employee,categorical,keep,none,not_applicable,one_hot,False,none,True,True,medium,clean categorical labels and encode
+no_of_employees,numeric_continuous,keep,none,review_or_winsorize,not_applicable,True,none,False,False,medium,"review missingness, outliers, transformation, and scaling"
+yr_of_estab,datetime,keep,none,not_applicable,not_applicable,False,none,False,False,medium,extract year/month/day/age/recency features later
+continent,categorical,keep,none,not_applicable,one_hot,False,none,False,False,low,clean categorical labels and encode
+full_time_position,binary_flag,keep,none,not_applicable,binary_map,False,none,False,False,low,ensure binary consistency before modeling
+has_job_experience,binary_flag,keep,none,not_applicable,binary_map,False,none,False,False,low,ensure binary consistency before modeling
+prevailing_wage,numeric_continuous,keep,none,not_applicable,not_applicable,True,none,False,False,low,"review missingness, outliers, transformation, and scaling"
+region_of_employment,categorical,keep,none,not_applicable,one_hot,False,none,False,False,low,clean categorical labels and encode
+requires_job_training,binary_flag,keep,none,not_applicable,binary_map,False,none,False,False,low,ensure binary consistency before modeling
+unit_of_wage,categorical,keep,none,not_applicable,one_hot,False,none,False,False,low,clean categorical labels and encode

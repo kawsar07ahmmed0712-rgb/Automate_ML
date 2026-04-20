@@ -1,22 +1,23 @@
-    missing_warn: 0.10
-    missing_high: 0.30
-    missing_severe: 0.60
+missing:
+  low: 5
+  high: 30
+  severe: 60
+  extreme_drop: 85
+  indicator_min: 5
+  indicator_max: 60
 
-    unique_ratio_id_like: 0.98
+numeric:
+  outlier_high_pct: 5
+  skew_moderate: 1
+  skew_severe: 2
+  zero_heavy_pct: 80
 
-    numeric_parse_threshold: 0.90
-    datetime_parse_threshold: 0.90
-    bool_parse_threshold: 0.95
+categorical:
+  rare_threshold: 0.01
+  high_cardinality: 50
+  rare_label_burden_ratio: 0.30
 
-    rare_category_threshold: 0.01
-    high_cardinality_threshold: 50
-
-    outlier_iqr_warn_pct: 0.01
-    outlier_iqr_high_pct: 0.05
-
-    skew_warn: 1.0
-    skew_high: 2.0
-
-    zero_heavy_threshold: 0.80
-    corr_high: 0.90
-    
+fuzzy:
+  score_cutoff: 92
+  min_cluster_size: 2
+  max_unique_values: 150
